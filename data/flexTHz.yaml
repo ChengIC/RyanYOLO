@@ -2,14 +2,16 @@
 
 
 # Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
-
-train: /Users/rc/Documents/code/THz_Dataset/train  # train images (relative to 'path') 128 images
-val: /Users/rc/Documents/code/THz_Dataset/val  # val images (relative to 'path') 128 images
-test:  /Users/rc/Documents/code/THz_Dataset/test  # test images (optional)
+path: ../datasets/THz_Dataset  # dataset root dir
+train: train.txt  # train images
+val: val.txt  # val images 
+test: test.txt  # 
 
 # Classes
 nc: 11 # number of classes
 names: ['GA', 'KK' , 'SS' , 
         'MD' , 'CK' , 'WB', 'KC' , 
         'CP' ,'CL' ,'LW' , 'UNKNOWN']  # class names
+
+
 

@@ -9,6 +9,15 @@ import cv2
 import sys
 import os 
 
+
+def calBack(xywh):
+    xmin = xywh[0] - xywh[2]/2
+    xmax = xywh[0] + xywh[2]/2
+    ymin = xywh[1] - xywh[3]/2
+    ymax = xywh[1] + xywh[3]/2
+    back = [xmin,ymin,xmax,ymax]
+    return back
+
 FILE = Path(__file__).resolve()
 ROOT = FILE.parents[0]  # YOLOv5 root directory
 if str(ROOT) not in sys.path:
